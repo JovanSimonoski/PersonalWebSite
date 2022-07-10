@@ -1,0 +1,647 @@
+#home{
+    background-image: url("../Images/Background/main_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#about,
+#education,
+#contact,
+#achievements{
+    background-image: url("../Images/Background/simple_bg.jpg");
+}
+body{
+    color: #000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+/********************MENU-NAVIGATION*********************/
+header.top{
+    height: 12vh;
+}
+#menu ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 12vh;
+    margin: auto;
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid black;
+}
+#menu ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+#menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    color: black;
+}
+/**************FOOTER-NAVIGATION****************************/
+footer.bottom{
+    border-top: 2px solid #ffffff;
+    background-color: rgba(0,0,0, 0.8);
+}
+footer.bottom nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    margin: auto;
+}
+footer.bottom nav ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+footer.bottom nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+/*===============LINKS=================*/
+/* Cool Link Hover **COPIED FROM NET** */
+#menu a,
+a.link,
+footer.bottom nav ul li a,
+#education a{
+    background-image: linear-gradient(
+            to right,
+            #ff0000,
+            #000000 50%,
+            #000000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+#about footer.bottom nav ul li a,
+#education footer.bottom nav ul li a{
+    background-image: linear-gradient(
+            to right,
+            #ff0000,
+            #ffffff 50%,
+            #ffffff 50%
+    );
+}
+#menu a:before,
+a.link:before,
+footer.bottom nav ul li a:before,
+#education a:before{
+    content: '';
+    background: #ff0000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+#menu a:hover,
+a.link:hover,
+footer.bottom nav ul li a:hover,
+#education a:hover{
+    background-position: 0;
+}
+#menu a:hover::before,
+a.link:hover::before,
+footer.bottom nav ul li a:hover::before,
+#education a:hover::before{
+    width:100%;
+}
+a.selected{
+    font-weight: bold;
+}
+/*=============BUTTON==================*/
+/* From uiverse.io */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    margin-top: 2%;
+}
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #ff0000;
+    border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #000;
+}
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #000;
+    border-right: 0.125rem solid #000;
+    transform: rotate(45deg);
+}
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #000000;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+button:hover .circle {
+    width: 100%;
+}
+button:hover .circle .icon.arrow {
+    background: #000;
+    transform: translate(1rem, 0);
+}
+button:hover .button-text {
+    color: #000;
+}
+/**************************************^^^^^HOME^^^^^*******************************************************************/
+#home section.main_section{
+    margin-top: 8%;
+    margin-left: 16%;
+    padding-left: 1.5%;
+    border-left: 1px solid black;
+    height: 50vh;
+    width: 50vw;
+    font-weight: normal;
+}
+#home section.main_section h1{
+    font-weight: normal;
+    font-size: 10vh;
+    letter-spacing: 1.5vh;
+    margin-bottom: 0;
+}
+section.main_section h3,
+section.main_section h4{
+    font-weight: normal;
+    letter-spacing: 0.5vh;
+}
+#home section.main_section h3 span.bigger{
+    font-size: 4vh;
+}
+/******************************************ABOUT***********************************************************************/
+section.who_am_i{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5%;
+    height: 80vh;
+}
+section.who_am_i img{
+    box-sizing: border-box;
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+#about_table{
+    width: 40%;
+    letter-spacing: 0.3vh;
+    margin-top: -4vh;
+    box-sizing: border-box;
+}
+#about_table tr{
+    height: 6vh;
+}
+#about_table h1{
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 5vh;
+    letter-spacing: 0.6vh;
+    margin-bottom: 2%;
+}
+#about_table td:last-child{
+    padding-left: 6%;
+    border-left: 1px solid black;
+    height: 6vh;
+}
+#about_table td:first-child{
+    width: 10%;
+}
+/*============ABOUT-LEARN MORE===============*/
+#learn-more,
+#learn-more2{
+    height: 80vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+#learn-more{
+    background-color: rgba(0,0,0, 0.7);
+    color: white;
+}
+#learn-more div.text,
+#learn-more2 div.text{
+    width: 40%;
+    text-align: justify;
+    box-sizing: border-box;
+}
+#learn-more img,
+#learn-more2 img{
+    width: 40%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+#learn-more2 div.text a button{
+    float: right;
+}
+#learn-more div.text p,
+#learn-more2 div.text p{
+    text-indent: 10%;
+    line-height: 3vh;
+    font-size: 2.5vh;
+}
+/******************************************EDUCATION*******************************************************************/
+#edu_header{
+    padding-left: 5%;
+    font-weight: normal;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+section.education-flex{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 82vh;
+    width: 100%;
+    margin-top: 0;
+}
+section.education-flex div.education-unit{
+    text-align: center;
+    height: 90%;
+    width: 20%;
+    background-color: lightgray;
+    border-radius: 6px;
+    background-size: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+section.education-flex div.education-unit:nth-child(1){
+    background-image: url("../Images/Education_Images/finki-logo.png");
+    background-repeat: no-repeat;
+}
+section.education-flex div.education-unit:nth-child(2){
+    background-image: url("../Images/Education_Images/car-samoil-logo.jpg");
+    background-repeat: no-repeat;
+}
+section.education-flex div.education-unit:nth-child(3){
+    background-image: url("../Images/Education_Images/mite-bogoevki-logo.png");
+    background-repeat: no-repeat;
+}
+section.education-flex div.education-unit h2{
+    font-weight: 400;
+    letter-spacing: 0.5vh;
+    font-size: 3vh;
+    line-height: 4vh;
+    margin-top: 105%;
+}
+section.education-flex div.education-unit h3{
+    font-weight: normal;
+    letter-spacing: 0.4vh;
+    font-size: 2.5vh;
+    line-height: 3.5vh;
+}
+section.education-flex div.education-unit h4{
+    font-weight: normal;
+}
+/******************************************************************************************/
+#education #learn-more{
+    height: 75vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    box-sizing: border-box;
+    padding-top: 3%;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    color: black;
+}
+#education #learn-more div.text{
+    width: 25%;
+    border-radius: 8px;
+    height: 90%;
+    box-sizing: border-box;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+#education #learn-more div.text h2{
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.4vh;
+    margin-bottom: 6vh;
+}
+#education #learn-more div.text ul{
+    padding-left: 1vh;
+}
+#learn-more div.text>ul>li{
+    list-style-type: none;
+    background-image: url("../Images/Education_Images/edu-logo.png");
+    background-repeat: no-repeat;
+    background-size: 12%;
+    padding-left: 15%;
+    font-size: 3vh;
+    font-weight: normal;
+    letter-spacing: 0.3vh;
+}
+#learn-more div.text ul li.pad_top{
+    margin-top: 3vh;
+}
+#learn-more div.text ul li.pad_left{
+    margin-top: 1vh;
+    margin-left: 8vh;
+    line-height: 3vh;
+    list-style-type: square;
+}
+/******************************************ACHIEVEMENTS****************************************************************/
+section.achievements-flex{
+    height: 76vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+section.achievements-flex div.achi-unit{
+    height: 30%;
+    width: 30%;
+    background-color: rgba(0,0,0, 0.8);
+    margin-bottom: 6%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+section.achievements-flex div.achi-unit div.flip-card-front{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+section.achievements-flex div.achi-unit div.flip-card-front h2{
+    box-sizing: border-box;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-weight: normal;
+    align-content: center;
+}
+sup{
+    text-transform: none;
+}
+/********************COPIED FROM NET**************************/
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    text-transform: uppercase;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card-inner h2{
+    color: white;
+    text-align: center;
+}
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.flip-card-back img{
+    height: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 2%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+    /* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: transparent;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: transparent;
+    color: white;
+    transform: rotateY(180deg);
+}
+/***************************************************CONTACT************************************************************/
+section.contact-box{
+    height: 75vh;
+    width: 70%;
+    color: white;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 8px;
+    background-color: rgba(0,0,0, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+section.contact-box div.info{
+    height: 100%;
+    width: 30%;
+    background-color: black;
+    border-radius: 8px 0 0 8px;
+    box-sizing: border-box;
+}
+section.contact-box div.message{
+    height: 100%;
+    width: 30%;
+    box-sizing: border-box;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+section.contact-box div.map{
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0, 0.2);
+    padding: 6%;
+    border-radius: 0 8px 8px 0;
+}
+/****************************************************/
+section.contact-box div.info h1{
+    color: white;
+    text-transform: uppercase;
+    background-color: black;
+    width: 100%;
+    height: 10%;
+    padding-top: 6%;
+    padding-left: 8%;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+    border-radius: 8px 0 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+section.contact-box input{
+    color: white;
+}
+section.contact-box div.info ul{
+    height: 70%;
+    width: 70%;
+    margin: auto;
+    padding-top: 10%;
+}
+section.contact-box div.info ul li{
+    display: inline-block;
+    height: 10%;
+    width: 80%;
+    margin-top: 10%;
+    color: white;
+    font-size: 2.5vh;
+    list-style-type: none;
+    padding-left: 20%;
+    padding-top: 3%;
+}
+section.contact-box div.info ul li a{
+    text-decoration: none;
+    color: white;
+}
+section.contact-box div.info ul li:nth-child(1){
+    background-image: url("../Images/Contact_Images/email-logo.png");
+    background-repeat: no-repeat;
+    background-size: 16%;
+}
+section.contact-box div.info ul li:nth-child(2){
+    background-image: url("../Images/Contact_Images/insta-logo.png");
+    background-repeat: no-repeat;
+    background-size: 16%;
+}
+section.contact-box div.info ul li:nth-child(3){
+    background-image: url("../Images/Contact_Images/fb-logo.png");
+    background-repeat: no-repeat;
+    background-size: 22%;
+    background-position: -4% -4px;
+}
+section.contact-box div.info ul li:nth-child(4){
+    background-image: url("../Images/Contact_Images/phone-logo.png");
+    background-repeat: no-repeat;
+    background-size: 16%;
+}
+section.contact-box div.info ul li:nth-child(5){
+    background-image: url("../Images/Contact_Images/address-logo.png");
+    background-repeat: no-repeat;
+    background-size: 24%;
+    background-position: -6% 0;
+}
+/****************************************/
+section.contact-box div.message h2{
+    text-transform: uppercase;
+    color: white;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding-top: 2%;
+}
+section.contact-box div.message input.input-div{
+    display: inline-block;
+    height: 5%;
+    width: 90%;
+    background: transparent;
+    margin-top: 15%;
+    border: 0 solid white;
+    border-bottom: 1px solid white;
+}
+section.contact-box div.message input.input-div:first-of-type{
+    margin-top: 25%;
+}
+section.contact-box div.message button{
+    height: 5%;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10%;
+    margin-right: 10%;
+    float: right;
+    letter-spacing: 1px;
+}
+/*********************************************************/
+section.contact-box div.map iframe{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+/**********************************************************************************************************************/
